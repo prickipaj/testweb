@@ -1,1 +1,3 @@
-{"query":{"id":19,"sql":"WITH pairs AS (\n    SELECT p.user_id liked, pa.user_id liker\n    FROM post_actions pa\n    LEFT JOIN posts p ON p.id = pa.post_id\n    WHERE post_action_type_id = 2\n)\nSELECT liker liker_user_id, liked liked_user_id, count(*)\nFROM pairs\nGROUP BY liked, liker\nORDER BY count DESC","name":"Most Common Likers","description":"Which users like particular other users the most?\n\nQuery by @riking","param_info":[]}}
+{"query":{"id":19,"sql":"WITH pairs AS (\n    SELECT p.user_id liked, pa.user_id liker\n    FROM post_actions pa\n    LEFT JOIN posts p ON p.id = pa.post_id\n    WHERE post_action_type_id = 2\n)\nSELECT liker liker_user_id, liked liked_user_id, count(*)\nFROM pairs\nGROUP BY liked, liker\nORDER BY count DESC","name":"Most Common Likers","description":"Which users like particular other users the most?\n\nQuery by @riking","param_info":[]}} 
+press << #function
+description ) #hashlist 
